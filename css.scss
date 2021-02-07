@@ -1,0 +1,271 @@
+// -------------------------------------
+// Susy Import
+// -------------------------------------
+//@import "susy";
+// -------------------------------------
+// Core Mixins
+// -------------------------------------
+@import "../core/core/mixins";
+// -------------------------------------
+// Variables Import
+// -------------------------------------
+// 載入全域變數
+@import "../core/core/variables";
+// -------------------------------------
+// Components / Modules Setting
+// -------------------------------------
+// 請輸入您的ClassName
+$classname: 'ntb_hfck';
+// 編譯後的CSS所在位置，如果你的CSS有需要讀圖檔或字型，請在URL字串前加上'#{$resource-path}'
+$resource-path: resource-path($classname);
+
+// -------------------------------------
+// 您的CSS Code
+// -------------------------------------
+//以下範例可以刪除，改為您自已的CSS Code
+.#{$classname} {
+	position: relative;
+	padding-top: 5px;
+	background-color: #fff;
+	background-color: transparent;
+	@media (min-width: $screen-desktop) {
+		padding-top: 15px;
+	}
+	>.ntb_content{
+		background-color: #fff;
+		background-color: transparent;
+		@media (min-width: $screen-desktop) {
+			border: solid 1px #e3e3e3;
+		}
+	
+		>.label {
+			position: absolute;
+			top: 0px;
+			left: 0;
+			width: 125px;
+			height: 30px;
+			background-color: #e10500;
+			box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2), 4px 5px 0px 4px #fff;
+			color: white;
+			font-size: 13px;
+			z-index: 1;
+			display: none;
+			@media (min-width: $screen-desktop) {
+				display: block;
+			}
+
+			>.label_city {
+				font-size: 15px;
+				font-weight: bold;
+				padding: 0 5px 0 10px;
+				display: inline-block;
+				margin-top: 3px;
+			}
+
+			&::before {
+				content: "";
+				position: absolute;
+				right: -14px;
+				top: 0px;
+				border-style: solid;
+				border-width: 15px 15px 15px 0;
+				border-color: #e10500 transparent;
+			}
+		}
+		.ctn {
+			white-space: nowrap;
+			min-height: 140px;
+			overflow: hidden;
+			position: relative;
+			width: 270%;
+			background-color: transparent;
+
+			@media (min-width: $screen-desktop) {
+				margin-top: 15px;
+				width: 100%;
+			}
+
+			>.panel {
+				// position: absolute;
+				// width: 90%;
+				display: inline-block;
+				border: solid 1px #e3e3e3;
+				width: 33%;
+				background-color: #fff;
+				border-radius: 5px;
+
+				@media (min-width: $screen-desktop) {
+					position: static;
+					display: block;
+					border: none;
+					width: 100%;
+				}
+
+				>.card_wrap {
+					cursor: default;
+					padding: 10px 10px 5px 10px;
+					display: block;
+					text-decoration: none;
+					color: #444;
+					position: relative;
+
+					@media (min-width: $screen-desktop) {
+						padding: 0 0 10px 0;
+						margin: 10px 20px 0;
+						border-bottom: 1px solid #e3e3e3;
+					}
+
+					.wifi-tag{
+						position: absolute;
+						top:-1px;
+						left:-1px;
+						font-size: 24px;
+						color:#a6926f;
+						&:before {
+							content: '\e957';
+						}
+						@media (min-width: $screen-desktop) {
+							display: none;
+						}
+					}
+
+					.wifi-text{
+						position: absolute;
+						top:-1px;
+						left:10px;
+						color: #fff;
+						font-size: 12px;
+						@media (min-width: $screen-desktop) {
+							display: none;
+						}
+					}
+
+					.card {
+						cursor: pointer;
+
+						>.card_img {
+							width: 125px;
+							height: 70px;
+							border-radius: 5px;
+						}
+
+						>.card_right {
+							display: inline-block;
+							vertical-align: top;
+							padding-right: 8px;
+							width: calc(100% - 120px);
+							min-height: 85px;
+							position: relative;
+							@media (min-width: $screen-desktop) {
+								padding-left: 10px;
+								width: calc(100% - 125px);
+								min-height: 70px;
+							}
+
+							>.card_title {
+								white-space: initial;
+								overflow: hidden;
+								text-overflow: ellipsis;
+								word-break: break-all;
+								display: inline;
+								-webkit-line-clamp: 2;
+								/* autoprefixer: off*/
+								-webkit-box-orient: vertical;
+								/* autoprefixer: on*/
+								@media (min-width: $screen-desktop) {
+									display: inline !important;
+								}
+							}
+
+							>.star {
+								color: #ff8401;
+								position: absolute;
+								bottom: 10px;
+								left: 0;
+								@media (min-width: $screen-desktop) {
+									position: static;
+								}
+							}
+
+							>.card_label_wrap {
+								position: relative;
+								margin-top: 5px;
+								white-space: initial;
+								display: none;
+								@media (min-width: $screen-desktop) {
+									display: block;
+								}
+
+								>.card_label {
+									display: inline-block;
+									font-size: 12px;
+									padding: 2px 6px;
+									border-radius: 2px;
+									background-color: #edeadc;
+								}
+								>.angle-right-2 {
+									position: absolute;
+									right: 0px;
+									top: 5px;
+			
+									@media (min-width: $screen-desktop) {
+										display: none;
+									}
+								}
+							}
+
+							>.btn {
+								background-color: #fff;
+								border-radius: 2px;
+								border: solid 1px #e10500;
+								color: #e10500;
+								position: absolute;
+								right: 5px;
+								bottom: 0;
+								padding: 0px 13px;
+								font-size: 12px;
+								line-height: 21px;
+								&:hover {
+									background-color: #e10500;
+									color: #fff;
+								}
+							}
+						}
+
+					}
+					.slogan{
+						border-top: solid 1px #e3e3e3;
+						text-align: right;
+						padding-top: 5px;
+						font-size: 12px;
+						color: #888;
+						@media (min-width: $screen-desktop) {
+							display: none;
+						}
+					}
+				}
+			}
+
+			// >.tabs {
+			// 	position: absolute;
+			// 	bottom: 0;
+			// 	left: 50%;
+			// 	transform: translateX(-50%);
+			// 	margin: 0 0 3px;
+			// 	padding: 0;
+
+			// 	>.tab {
+			// 		display: inline-block;
+			// 		width: 6px;
+			// 		height: 6px;
+			// 		border-radius: 50%;
+			// 		background-color: #e3e3e3;
+			// 	}
+
+			// 	>.active {
+			// 		background-color: #444;
+			// 	}
+			// }
+		}
+}
+}
